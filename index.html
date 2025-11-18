@@ -127,11 +127,23 @@
             background-color: #1A1A1A;
             border-radius: 12px;
             margin-bottom: 25px;
-            padding: 20px;
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
             text-align: right;
             border-left: 5px solid #FFD700;
+            overflow: hidden; /* لإدارة الصورة */
         }
+
+        .rank-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .rank-content-text {
+            padding: 0 20px 20px; 
+        }
+
         .rank-card .title {
             color: #FFFFFF;
             font-size: 1.4em;
@@ -140,7 +152,7 @@
         }
         .rank-card .name {
             color: #FFD700; 
-            font-size: 1.5em; /* زيادة حجم الاسم الجديد */
+            font-size: 1.5em; 
             font-weight: normal;
             margin-bottom: 10px;
             padding-bottom: 5px;
@@ -192,21 +204,30 @@
             </header>
 
             <div class="rank-card">
-                <div class="title">الإمبراطور</div>
-                <div class="name">𝑰𝑻𝑨𝑪𝑯𝑰</div>
-                <p class="description">الإمبراطور الأعلى ومؤسس المنظمة</p>
+                <img src="https://storage.googleapis.com/uploaded_files_gemini/1000621467.jpg" alt="صورة الإمبراطور إيتاتشي">
+                <div class="rank-content-text">
+                    <div class="title">الإمبراطور</div>
+                    <div class="name">𝑰𝑻𝑨𝑪𝑯𝑰</div>
+                    <p class="description">الإمبراطور الأعلى ومؤسس المنظمة</p>
+                </div>
             </div>
 
             <div class="rank-card">
-                <div class="title">نائب الإمبراطور</div>
-                <div class="name">𝒀𝑼𝑻𝑨</div>
-                <p class="description">الذراع الأيمن للإمبراطور والقائد الثاني</p>
+                <img src="https://storage.googleapis.com/uploaded_files_gemini/1000629526.jpg" alt="صورة النائب يوتا">
+                <div class="rank-content-text">
+                    <div class="title">نائب الإمبراطور</div>
+                    <div class="name">𝒀𝑼𝑻𝑨</div>
+                    <p class="description">الذراع الأيمن للإمبراطور والقائد الثاني</p>
+                </div>
             </div>
 
             <div class="rank-card">
-                <div class="title">المستشار الأعلى</div>
-                <div class="name">𝑨𝒀𝑼𝑵𝑶</div>
-                <p class="description">المستشار الأعلى ومدير العمليات الاستراتيجية</p>
+                <img src="https://storage.googleapis.com/uploaded_files_gemini/1000629527.jpg" alt="صورة المستشار أيانو كوجي">
+                <div class="rank-content-text">
+                    <div class="title">المستشار الأعلى</div>
+                    <div class="name">𝑨𝒀𝑼𝑵𝑶</div>
+                    <p class="description">المستشار الأعلى ومدير العمليات الاستراتيجية</p>
+                </div>
             </div>
         </section>
 
