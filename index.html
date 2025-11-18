@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            scroll-behavior: smooth; /* لتمرير سلس */
         }
         .container {
             max-width: 800px;
@@ -20,15 +21,16 @@
             padding: 20px;
         }
 
-        /* تنسيق قسم الترحيب والفوائد */
+        /* تنسيق قسم الترحيب والفوائد (الصفحة الرئيسية) */
         .main-content {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            min-height: 80vh; /* لضمان تركيز المحتوى في وسط الشاشة */
+            min-height: 100vh; /* لتغطية الشاشة أولاً */
             justify-content: center;
-            padding-top: 50px;
+            padding-top: 0;
+            padding-bottom: 50px;
         }
 
         .main-content h1 {
@@ -85,10 +87,67 @@
             font-weight: bold;
         }
 
-        .cta {
-            margin-top: 30px;
+        .scroll-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            background-color: #FFD700;
+            color: #0A0A0A;
+            text-decoration: none;
             font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .scroll-button:hover {
+            background-color: #FFE56B;
+            transform: scale(1.05);
+        }
+
+        /* تنسيق قسم الرتب (يظهر بعد التمرير) */
+        .ranks-section {
+            padding: 80px 20px;
+            background-color: #151515;
+            border-top: 2px solid #FFD70033;
+        }
+        .ranks-section header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .ranks-section header h2 {
             color: #FFD700;
+            font-size: 2.5em;
+            border-bottom: 2px dotted #5C5C5C;
+            padding-bottom: 10px;
+            text-shadow: 0 0 12px #FFD70099;
+        }
+
+        /* تنسيق بطاقات الرتب بدون صور */
+        .rank-card {
+            background-color: #1A1A1A;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+            text-align: right;
+            border-left: 5px solid #FFD700;
+        }
+        .rank-card .title {
+            color: #FFFFFF;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .rank-card .name {
+            color: #FFD700; 
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dotted #3A3A3A;
+        }
+        .rank-card .description {
+            color: #B8B8B8;
+            font-size: 0.95em;
         }
 
         footer {
@@ -97,7 +156,7 @@
             color: #5C5C5C;
             font-size: 0.85em;
             border-top: 1px solid #333;
-            margin-top: 30px;
+            margin-top: 0;
         }
     </style>
 </head>
@@ -122,9 +181,34 @@
                 ملاحظة هامة: إذا جيت تهايط أو تقدح — سلملي على رقمك. 🚫
             </div>
 
-            <p class="cta">اطلع على الرتب العليا</p>
+            <a href="#ranks" class="scroll-button">اطلع على الرتب العليا ↓</a>
 
         </section>
+
+        <section class="ranks-section" id="ranks">
+            <header>
+                <h2>الرتب العليا</h2>
+            </header>
+
+            <div class="rank-card">
+                <div class="title">الإمبراطور</div>
+                <div class="name">الامبراطور</div>
+                <p class="description">الإمبراطور الأعلى ومؤسس المنظمة</p>
+            </div>
+
+            <div class="rank-card">
+                <div class="title">نائب الإمبراطور</div>
+                <div class="name">النائب</div>
+                <p class="description">الذراع الأيمن للإمبراطور والقائد الثاني</p>
+            </div>
+
+            <div class="rank-card">
+                <div class="title">المستشار الأعلى</div>
+                <div class="name">المستشار</div>
+                <p class="description">المستشار الأعلى ومدير العمليات الاستراتيجية</p>
+            </div>
+        </section>
+
     </div>
 
     <footer>
