@@ -17,93 +17,78 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 0;
+            padding: 20px;
         }
 
-        /* 1. تنسيق قسم الترحيب والمعلومات (الصفحة الأولى) */
-        .info-section {
+        /* تنسيق قسم الترحيب والفوائد */
+        .main-content {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            min-height: 80vh; /* لضمان تركيز المحتوى في وسط الشاشة */
             justify-content: center;
-            min-height: 50vh; /* تصغير حجم قسم المعلومات */
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 2px solid #FFD70033;
-            background-color: #151515;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
-        }
-        .info-section h1 {
-            color: #FFD700;
-            font-size: 3em;
-            margin-bottom: 15px;
-            text-shadow: 0 0 15px #FFD700B3;
-        }
-        .info-section p {
-            font-size: 1.3em; 
-            color: #E0E0E0; 
-            margin-bottom: 30px;
+            padding-top: 50px;
         }
 
-        /* 2. تنسيق قسم الرتب (بعد التمرير) */
-        .ranks-section {
-            padding: 80px 20px;
-            padding-top: 50px; 
-        }
-        .ranks-section header {
-            padding: 0 0 20px;
-            border-bottom: 2px solid #FFD70033;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .ranks-section header h2 {
+        .main-content h1 {
             color: #FFD700;
-            font-size: 2.5em;
-            margin: 0;
-            text-shadow: 0 0 12px #FFD70099;
-        }
-        .ranks-section header p {
-            font-size: 1.1em;
-            color: #B8B8B8;
-            margin-top: 10px;
-        }
-
-        /* تنسيق بطاقات الرتب (Ranks Cards) */
-        .rank-card {
-            background-color: #1A1A1A;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-            text-align: center;
-        }
-        .rank-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 5px solid #FFD700;
-        }
-        .rank-content {
-            padding: 25px 20px;
-        }
-        .rank-content .title {
-            color: #FFD700;
-            font-size: 1.6em;
-            font-weight: bold;
+            font-size: 3.5em;
             margin-bottom: 5px;
-            text-shadow: 0 0 5px #FFD70077;
-        }
-        .rank-content .name {
-            color: #B8B8B8; 
-            font-size: 1.2em;
-            margin-bottom: 15px;
+            text-shadow: 0 0 15px #FFD700B3;
+            border-bottom: 2px solid #FFD70033;
             padding-bottom: 10px;
-            border-bottom: 1px dotted #3A3A3A;
         }
-        .rank-content .description {
+
+        .main-content h2 {
+            color: #E0E0E0;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            max-width: 550px;
+            margin-top: 20px;
+        }
+        .benefits-list li {
+            background-color: #1A1A1A;
+            padding: 18px;
+            margin-bottom: 12px;
+            border-right: 5px solid #FFD700;
+            border-radius: 8px;
+            font-size: 1.15em;
             color: #B8B8B8;
-            font-size: 1em;
-            line-height: 1.4;
+            text-align: right;
+            transition: background-color 0.3s;
+        }
+        .benefits-list li:hover {
+            background-color: #2A2A2A;
+        }
+
+        .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background-color: #331A1A;
+            color: #FF5555;
+            padding: 15px;
+            margin-top: 40px;
+            border: 2px solid #FF0000;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .cta {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #FFD700;
         }
 
         footer {
@@ -118,48 +103,30 @@
 </head>
 <body>
     <div class="container">
+        <section class="main-content">
+            <h1>𝑲𝑼𝑹𝑨𝑴𝑨 🌑</h1>
+            <p style="font-size: 1.5em; color: #E0E0E0;">أهلًا وسهلًا بكم</p>
 
-        <section class="info-section">
-            <h1>أهلاً بك في 𝑲𝑼𝑹𝑨𝑴𝑨 🌑</h1>
-            <p>مجتمع النخبة والقيادة العليا.</p>
+            <h2>عن المنظمة</h2>
+            <p class="highlight">『وش فايدة منظمه كوروما؟』</p>
+
+            <ul class="benefits-list">
+                <li>تجمع <span class="highlight">نخبة المبرمجين والمطورين</span>.</li>
+                <li>أقوى المشاريع والابتكارات التقنية.</li>
+                <li>بوتات وسكريبتات <span class="highlight">عالية الجودة</span>.</li>
+                <li>دورات تعليمية وورش تطوير.</li>
+                <li>أكثر من 13 فرع متنوع: الشير، الصحافة، المسابقات، الستيكرز، البرمجة، الألعاب، وأكثر من <span class="highlight">200+ نشاط وفرع.</span></li>
+            </ul>
+
+            <div class="warning-box">
+                ملاحظة هامة: إذا جيت تهايط أو تقدح — سلملي على رقمك. 🚫
+            </div>
+
+            <p class="cta">اطلع على الرتب العليا</p>
+
         </section>
-
-        <section class="ranks-section">
-            <header>
-                <h2>الرتب العليا</h2>
-                <p>قادة منظمة KURAMA</p>
-            </header>
-
-            <div class="rank-card">
-                <img src="https://i.imgur.com/k9v9vYm.jpg" alt="صورة الإمبراطور">
-                <div class="rank-content">
-                    <div class="title">الإمبراطور</div>
-                    <div class="name">الامبراطور</div>
-                    <p class="description">الإمبراطور الأعلى ومؤسس المنظمة</p>
-                </div>
-            </div>
-
-            <div class="rank-card">
-                <img src="https://i.imgur.com/k9v9vYm.jpg" alt="صورة النائب">
-                <div class="rank-content">
-                    <div class="title">نائب الإمبراطور</div>
-                    <div class="name">النائب</div>
-                    <p class="description">الذراع الأيمن للإمبراطور والقائد الثاني</p>
-                </div>
-            </div>
-
-            <div class="rank-card">
-                <img src="https://i.imgur.com/k9v9vYm.jpg" alt="صورة المستشار">
-                <div class="rank-content">
-                    <div class="title">المستشار الأعلى</div>
-                    <div class="name">المستشار</div>
-                    <p class="description">المستشار الأعلى ومدير العمليات الاستراتيجية</p>
-                </div>
-            </div>
-        </section>
-
     </div>
-    
+
     <footer>
         © 2025 منظمة KURAMA 🌑
     </footer>
