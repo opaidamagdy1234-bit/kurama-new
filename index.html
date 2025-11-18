@@ -13,7 +13,6 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            scroll-behavior: smooth; 
         }
         .container {
             max-width: 800px;
@@ -29,7 +28,6 @@
             text-align: center;
             min-height: 100vh; 
             justify-content: center;
-            padding-top: 0;
             padding-bottom: 50px;
         }
 
@@ -86,8 +84,9 @@
             font-size: 1.1em;
             font-weight: bold;
         }
-
-        .scroll-button {
+        
+        /* الزر الجديد يوجه لصفحة الرتب */
+        .page-button {
             display: inline-block;
             margin-top: 40px;
             padding: 12px 25px;
@@ -99,68 +98,9 @@
             border-radius: 50px;
             transition: background-color 0.3s, transform 0.3s;
         }
-        .scroll-button:hover {
+        .page-button:hover {
             background-color: #FFE56B;
             transform: scale(1.05);
-        }
-
-        /* تنسيق قسم الرتب (يظهر بعد التمرير) */
-        .ranks-section {
-            padding: 80px 20px;
-            background-color: #151515;
-            border-top: 2px solid #FFD70033;
-        }
-        .ranks-section header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .ranks-section header h2 {
-            color: #FFD700;
-            font-size: 2.5em;
-            border-bottom: 2px dotted #5C5C5C;
-            padding-bottom: 10px;
-            text-shadow: 0 0 12px #FFD70099;
-        }
-
-        /* تنسيق بطاقات الرتب */
-        .rank-card {
-            background-color: #1A1A1A;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
-            text-align: right;
-            border-left: 5px solid #FFD700;
-            overflow: hidden; 
-        }
-
-        .rank-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .rank-content-text {
-            padding: 0 20px 20px; 
-        }
-
-        .rank-card .title {
-            color: #FFFFFF;
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .rank-card .name {
-            color: #FFD700; 
-            font-size: 1.5em; 
-            font-weight: normal;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px dotted #3A3A3A;
-        }
-        .rank-card .description {
-            color: #B8B8B8;
-            font-size: 0.95em;
         }
 
         footer {
@@ -193,46 +133,13 @@
             <div class="warning-box">
                 ملاحظة هامة: إذا جيت تهايط أو تقدح — سلملي على رقمك. 🚫
             </div>
-
-            <a href="#ranks" class="scroll-button">اطلع على الرتب العليا ↓</a>
+            
+            <a href="ranks.html" class="page-button">اطلع على الرتب العليا ↓</a>
 
         </section>
-
-        <section class="ranks-section" id="ranks">
-            <header>
-                <h2>الرتب العليا</h2>
-            </header>
-
-            <div class="rank-card">
-                <img src="./images/itachi.jpg" alt="صورة الإمبراطور إيتاتشي">
-                <div class="rank-content-text">
-                    <div class="title">الإمبراطور</div>
-                    <div class="name">𝑰𝑻𝑨𝑪𝑯𝑰</div>
-                    <p class="description">الإمبراطور الأعلى ومؤسس المنظمة</p>
-                </div>
-            </div>
-
-            <div class="rank-card">
-                <img src="./images/yuta.jpg" alt="صورة النائب يوتا">
-                <div class="rank-content-text">
-                    <div class="title">نائب الإمبراطور</div>
-                    <div class="name">𝒀𝑼𝑻𝑨</div>
-                    <p class="description">الذراع الأيمن للإمبراطور والقائد الثاني</p>
-                </div>
-            </div>
-
-            <div class="rank-card">
-                <img src="./images/ayuno.jpg" alt="صورة المستشار أيانو كوجي">
-                <div class="rank-content-text">
-                    <div class="title">المستشار الأعلى</div>
-                    <div class="name">𝑨𝒀𝑼𝑵𝑶</div>
-                    <p class="description">المستشار الأعلى ومدير العمليات الاستراتيجية</p>
-                </div>
-            </div>
-        </section>
-
+        
     </div>
-
+    
     <footer>
         © 2025 منظمة KURAMA 🌑
     </footer>
