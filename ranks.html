@@ -51,7 +51,7 @@
             display: block;
             margin-bottom: 15px;
         }
-
+        
         .rank-content-text {
             padding: 0 20px 20px; 
         }
@@ -61,6 +61,13 @@
             font-size: 1.4em;
             font-weight: bold;
             margin-bottom: 5px;
+        }
+        /* تنسيق كلمة معفي بلون أحمر صغير */
+        .rank-card .title .exempt {
+            color: #FF4500; /* لون أحمر برتقالي */
+            font-size: 0.8em;
+            font-weight: normal;
+            margin-right: 10px;
         }
         .rank-card .name {
             color: #FFD700; 
@@ -103,14 +110,14 @@
 </head>
 <body>
     <div class="container">
-
+        
         <a href="index.html" class="back-button">← العودة للصفحة الرئيسية</a>
 
         <section class="ranks-section">
             <header>
                 <h2>الرتب العليا</h2>
             </header>
-
+            
             <div class="rank-card">
                 <img src="./images/ayuno.jpg" alt="صورة الإمبراطور إيتاتشي">
                 <div class="title">الإمبراطور</div>
@@ -120,7 +127,7 @@
 
             <div class="rank-card">
                 <img src="./images/itachi.jpg" alt="صورة النائب يوتا">
-                <div class="title">نائب الإمبراطور</div>
+                <div class="title">نائب الإمبراطور <span class="exempt">مـعـفـي</span></div>
                 <div class="name">𝒀𝑼𝑻𝑨</div>
                 <p class="description">الذراع الأيمن للإمبراطور والقائد الثاني.</p>
             </div>
@@ -134,7 +141,7 @@
         </section>
 
     </div>
-
+    
     <footer>
         © 2025 منظمة KURAMA 🌑
     </footer>
