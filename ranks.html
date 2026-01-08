@@ -8,19 +8,27 @@
         body { font-family: 'Tahoma', sans-serif; background-color: #0A0A0A; color: #E0E0E0; margin: 0; padding: 0; }
         .container { max-width: 450px; margin: 0 auto; padding: 15px; text-align: center; }
         .ranks-section { padding: 40px 0; background-color: #151515; min-height: 100vh; }
-        .rank-card { background-color: #1A1A1A; border-radius: 15px; margin: 0 auto; box-shadow: 0 0 25px rgba(255, 215, 0, 0.4); border: 2px solid #FFD700; overflow: hidden; width: 100%; }
+        .ranks-section header h2 { color: #FFD700; font-size: 2.2em; border-bottom: 2px dotted #444; margin-bottom: 30px; display: inline-block; padding: 10px 30px; }
+        .rank-card { background-color: #1A1A1A; border-radius: 15 / 1px; margin: 0 auto 30px auto; box-shadow: 0 0 25px rgba(255, 215, 0, 0.4); border: 2px solid #FFD700; overflow: hidden; width: 100%; }
         .image-container { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background-color: #000; }
         .rank-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .rank-content-text { padding: 25px; background: #1A1A1A; border-top: 2px solid #FFD700; }
         .rank-card .name { color: #FFD700; font-size: 2.5em; margin: 10px 0; font-weight: bold; text-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
+        .rank-card .description { color: #B8B8B8; font-size: 1.1em; }
         .back-button { display: inline-block; margin-bottom: 20px; padding: 10px 25px; color: #FFD700; text-decoration: none; border-radius: 20px; border: 1px solid #FFD700; }
+        footer { text-align: center; padding: 30px 0; color: #444; }
+        /* ستايل خاص للنائب بلون مختلف قليلاً إذا أردت */
+        .vampire-card { border-color: #C0C0C0; box-shadow: 0 0 25px rgba(192, 192, 192, 0.3); }
+        .vampire-card .name { color: #C0C0C0; text-shadow: 0 0 15px rgba(192, 192, 192, 0.5); }
+        .vampire-card .rank-content-text { border-top: 2px solid #C0C0C0; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="back-button">← العودة للرئيسية</a>
         <section class="ranks-section">
-            <header><h2 style="color: #FFD700;">الرتب العليا</h2></header>
+            <header><h2>الرتب العليا</h2></header>
+            
             <div class="rank-card">
                 <div class="image-container">
                     <img src="./images/v_king_final.jpg" alt="𝐕𝐄𝐍𝐎𝐌">
@@ -28,10 +36,23 @@
                 <div class="rank-content-text">
                     <div class="title" style="color:#AAA">الإمبراطور</div>
                     <div class="name">𝐕𝐄𝐍𝐎𝐌</div>
-                    <p style="color: #B8B8B8;">الحاكم الأعلى ومنشئ النظام.</p>
+                    <p class="description">الحاكم الأعلى ومنشئ النظام.</p>
                 </div>
             </div>
+
+            <div class="rank-card vampire-card">
+                <div class="image-container">
+                    <img src="./images/vampire_rank.jpg" alt="𝐕𝐀𝐌𝐏𝐈𝐑𝐄">
+                </div>
+                <div class="rank-content-text">
+                    <div class="title" style="color:#AAA">نائب الإمبراطور</div>
+                    <div class="name">𝐕𝐀𝐌𝐏𝐈𝐑𝐄</div>
+                    <p class="description">اليد اليمنى والمسؤول عن تنفيذ القرارات.</p>
+                </div>
+            </div>
+
         </section>
     </div>
+    <footer>© 2026 منظمة KURAMA 🌑</footer>
 </body>
 </html>
